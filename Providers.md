@@ -1,5 +1,5 @@
 # Providers 
-A provider in Terraform is a plugin that enables interaction with an API. This includes cloud providers
+A provider in Terraform is a plugin that enables interaction with an API. This includes cloud providers (AWS, Azure, GCP)
 
 ## Different ways to configure providers in terraform
 
@@ -15,7 +15,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "example" {
-  ami = "ami-0123456789abcdef0"
+  ami = "ami-xxxx"
   instance_type = "t2.micro"
 }
 ```
@@ -33,7 +33,7 @@ module "aws_vpc" {
 }
 
 resource "aws_instance" "example" {
-  ami = "ami-0123456789abcdef0"
+  ami = "ami-xxxx"
   instance_type = "t2.micro"
   depends_on = [module.aws_vpc]
 }
@@ -54,11 +54,14 @@ terraform {
 }
 
 resource "aws_instance" "example" {
-  ami = "ami-0123456789abcdef0"
+  ami = "ami-xxxx"
   instance_type = "t2.micro"
 }
 ```
 
-The best way to configure providers depends on your specific needs. If you are only using a single provider, then configuring it in the root module is the simplest option. If you are using multiple providers, or if you want to reuse the same provider configuration in multiple resources, then configuring it in a child module is a good option. And if you want to make sure that a specific provider version is used, then configuring it in the required_providers block is the best option.
+The best way to configure providers depends on your specific needs.
+ - If you are only using a single provider, then configuring it in the root module is the simplest option.
+ - If you are using multiple providers, or if you want to reuse the same provider configuration in multiple resources, then configuring it in a child module is a good option.
+ - If you want to make sure that a specific provider version is used, then configuring it in the required_providers block is the best option.
 
 
