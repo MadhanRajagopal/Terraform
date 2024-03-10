@@ -41,14 +41,18 @@ resource "aws_instance" "example" {
 
 ### In the required_providers block
 
-You can also configure providers in the required_providers block. This is useful if you want to make sure that a specific provider version is used.
+The required_providers block in Terraform is used to declare and specify the required provider configurations for your Terraform module or configuration. It allows you to specify the provider name, source, and version constraints.
 
 ```hcl
 terraform {
   required_providers {
     aws = {
-      source = "hashicorp/aws"
-      version = "~> 3.79"
+      source  = "hashicorp/aws"
+      version = "~> 3.0"
+    }
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = ">= 2.0, < 3.0"
     }
   }
 }
