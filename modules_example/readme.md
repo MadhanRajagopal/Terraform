@@ -1,21 +1,21 @@
-### Terraform Modules Example 
+# Terraform Modules Example 
 
 
-# Set Environment variable values
+## Set Environment variable values
 
 ``` cmd
-export AWS_ACCESS_KEY_ID="*****************I"
-export AWS_SECRET_ACCESS_KEY="********************************"
+export AWS_ACCESS_KEY_ID="<access_key>"
+export AWS_SECRET_ACCESS_KEY="<secret_key>"
 
 ```
 
-#Intialize 
+## Intialize 
 
 ```hcl
 terraform init
 ```
 
-#Validate & plan
+## Validate & plan
 
 
 ```hcl
@@ -24,8 +24,15 @@ terraform validate   # validates syntax
 terraform plan  #provides layout of resource information before creation 
 ``` 
 
-# Execute
+## Execute
 
 ```hcl
 terraform apply
+```
+
+
+## Destroy 
+
+```hcl
+terraform destroy
 ```
