@@ -16,5 +16,4 @@ Using a locking mechanism in order to avoid concurrent modification
 - Provide Partition key values as `LockID`
 
 ## Images
-
-![GitHub Image](/images/output.png)
+![output](https://github.com/MadhanRajagopal/Terraform/assets/138750648/0bac4ccf-585e-492d-9b74-1e36a40b21d5)
